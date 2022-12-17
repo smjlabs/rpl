@@ -1,0 +1,59 @@
+{% extends "./baselogin.html" %}
+{% block title %} 
+    {{ content.title_page }}
+{% endblock %}
+{% block content %}
+<div class="container-fluid my-4">
+    <div class="row">
+        <div class="col-sm-12 col-md-2 col-lg-2">
+            {% include './includes/navbar.html' %}
+        </div>
+
+        <div class="col-sm-12 col-md-10 col-lg-10">
+            <div class="card ">
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="mb-3 row">
+                                <div class="col-sm-12 my-1">
+                                    <label for="" class="text-muted">Keyword</label>
+                                    <input type="text" class="form-control" id="search" name="search" placeholder="Keyword" />
+                                </div>
+                                <!-- <div class="col-sm-4 my-1">
+                                    <label for="" class="text-muted">Source</label>
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <option value="" hidden>Source</option>
+                                        <option value="1" selected>ACM</option>
+                                        <option value="2">IEEEE</option>
+                                        <option value="3">Springer Link</option>
+                                    </select>
+                                </div> -->
+                                <div class="col-sm-4 my-1">
+                                    <label for="" class="text-muted">Limit Record</label>
+                                    <input type="number" name="limit" placeholder="Limit Records" id="limit" class="form-control" min="0" value="50">
+                                </div>
+                                <div class="col-sm-12 my-1">
+                                    <button type="button" id="btnSearch" class="btn btn-primary"> Search </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-12 d-none" id="loading_progress">
+                            <div class="spinner-border spinner-border-sm" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                            <small class="text-muted text-replace-temp">tesx</small>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="1" aria-valuemin="1" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
